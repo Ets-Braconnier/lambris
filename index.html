@@ -9,12 +9,6 @@
 </head>
 
 <body>
-  <header class="top">
-    <div class="nav-row">
-      <div id="catButtons" class="catButtons"></div>
-      <select id="catSelect" class="catSelect" aria-label="Choisir une catégorie"></select>
-    </div>
-  </header>
 
   <div id="app"></div>
 
@@ -462,9 +456,6 @@
     (async function init() {
       try {
         await loadPricesFromFolder();
-        buildCatButtons();
-        buildCatSelect();
-        syncCategoryUI();
         render();
       } catch (e) {
         console.error("Init error:", e);
