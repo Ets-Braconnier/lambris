@@ -10,11 +10,12 @@
   --gold-2: #9e7c32;
   --border: #e5e5e5;
   --soft: #f7f7f7;
+  --max: 1250px;
 }
 
 body {
   font-family: Arial, sans-serif;
-  margin: 20px;
+  margin: 0;
   line-height: 1.4;
   color: #222;
 }
@@ -28,7 +29,8 @@ header.top {
 }
 
 #app {
-  margin-top: 12px;
+  width: min(var(--max), 100% - 32px);
+  margin: 18px auto 28px;
 }
 
 .muted {
@@ -274,7 +276,8 @@ figcaption {
   top: 11px;
 }
 
-@media (max-width: 700px), (pointer: coarse) {
+@media (max-width: 700px),
+(pointer: coarse) {
   body {
     margin: 12px;
   }
